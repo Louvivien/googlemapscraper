@@ -35,6 +35,8 @@ const scrapeGoogleSearch = async (query) => {
     console.log("Loading Time for Number of review: ", (performance.now() - startTime).toFixed(2), "ms");
 
     await browser.close();
+    return {placeId,reviewLink,rating,numberOfReview};
+
 }
 
 scrapeGoogleSearch("DIAGNOSYS balbins")
